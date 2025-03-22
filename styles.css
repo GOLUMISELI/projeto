@@ -1,0 +1,223 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #051428 0%, #0a2a4f 100%);
+    color: #fff;
+}
+
+/* Login and Registration Container */
+.container {
+    width: 350px;
+    background: rgba(11, 57, 106, 0.7);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(56, 147, 223, 0.3);
+    position: relative;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #3a8bda, transparent, #3a8bda);
+    z-index: -1;
+    border-radius: 32px;
+    filter: blur(10px);
+    opacity: 0.5;
+}
+
+/* Game Dashboard Container */
+.canva {
+    width: 800px;
+    text-align: center;
+    background: rgba(11, 57, 106, 0.7);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(56, 147, 223, 0.3);
+    position: relative;
+}
+
+.canva::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #3a8bda, transparent, #3a8bda);
+    z-index: -1;
+    border-radius: 32px;
+    filter: blur(10px);
+    opacity: 0.5;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #a5c6e8;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(9, 43, 81, 0.8);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 0 3px rgba(58, 139, 218, 0.3);
+}
+
+input::placeholder {
+    color: #6b8eb2;
+}
+
+/* Buttons */
+button {
+    padding: 15px;
+    background-color: #3a8bda;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2a6cb2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Links */
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: #a5c6e8;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: #3a8bda;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Canvas Styling for Game */
+#gameCanvas {
+    background-color: rgba(9, 43, 81, 0.8);
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+}
+
+/* User Info in Dashboard */
+#usernameDisplay {
+    font-weight: bold;
+    color: #3a8bda;
+}
+
+#saldo {
+    font-weight: bold;
+    color: #3a8bda;
+    font-size: 18px;
+}
+
+/* Logout Button */
+#logout {
+    background-color: #e74c3c;
+    margin-top: 20px;
+    width: 120px;
+}
+
+#logout:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .canva {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    #gameCanvas {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    input, button {
+        padding: 12px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    #gameCanvas {
+        height: 250px;
+    }
+}
